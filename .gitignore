@@ -1,0 +1,19 @@
+LibraryManagementSystem
+*.o
+library_data.json
+# Generated program folders
+/LibraryManagementSystem/
+/LibraryManagementsystem/
+
+# ZIP files
+*.zip
+
+# Compiled files
+*.o
+*.out
+*.exe
+*.class
+
+# IDE files
+.vscode/
+.idea/LibraryManagementsystem

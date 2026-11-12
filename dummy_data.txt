@@ -1,0 +1,49 @@
+LIBRARY MANAGEMENT SYSTEM - PRESENTATION DEMO DATA
+===================================================
+
+Use these values through the menus. The generated IDs will be shown after adding:
+
+BOOKS
+1. Title: Clean Code
+   Author: Robert C. Martin
+   Category: Programming
+   Copies: 2
+
+2. Title: Data Structures Made Easy
+   Author: Narasimha Karumanchi
+   Category: Computer Science
+   Copies: 1
+
+3. Title: The Alchemist
+   Author: Paulo Coelho
+   Category: Fiction
+   Copies: 3
+
+MEMBERS
+1. Name: Aditi Sharma
+   Department: Computer Science
+
+2. Name: Rahul Verma
+   Department: Electronics
+
+HOW TO PRESENT (about 3 minutes)
+1. Add the three books and two members using menus 1 and 2.
+   Expected IDs: books 101, 102, 103; members 1001, 1002.
+2. Issue Clean Code to Aditi: menu 3, member 1001, book 101.
+   Explain: the system sets the due date to 14 days and reduces FREE from 2 to 1.
+3. Return it: menu 4, loan 1.
+   Explain: FREE remains 1 because a returned physical copy is not trusted yet.
+4. Verify it: menu 5, loan 1, then type F.
+   Explain: only now does FREE return to 2. Repeat the process with M to show that a missing book does not increase stock.
+5. Issue Data Structures Made Easy and show menu 7.
+   For a demand suggestion, issue and successfully return the same title three times across members/demos; its borrow count becomes 3. With one or zero free copy it is suggested for an additional copy.
+6. Open menu 8 to show the permanent borrowing history and menu 9 for statistics.
+
+OVERDUE DEMO NOTE
+The due date is intentionally calculated from the actual current date. For a live overdue demonstration, use a previously saved `library_data.json` with an ISSUED loan whose `due` date is in the past, then start the program and select menu 6. The report displays the member, book, due date, and days late automatically.
+
+VIVA TALKING POINTS
+- The 3-book rule checks only loans with status ISSUED.
+- Availability is decreased at issue, but increased only after FOUND verification.
+- Borrow count is historical: returning a book never removes it, so it supports demand ranking.
+- Data persists as JSON without an external database or API.
